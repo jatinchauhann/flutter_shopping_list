@@ -29,8 +29,8 @@ class _NewItemState extends State<NewItem> {
         _isSending = true;
       });
       _formKey.currentState!.save();
-      final url = Uri.https('shopping-list-ebde2-default-rtdb.firebaseio.com',
-          'shopping-list.json');
+      final url = Uri.https(
+          'shopping-list-ebde2-default.firebaseio.com', 'shopping-list.json');
       final response = await http.post(url,
           headers: {'Content-Type': 'application/json'},
           body: json.encode({
